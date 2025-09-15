@@ -10,11 +10,21 @@ export const load: LayoutLoad = async ({ fetch, data, depends }) => {
 		? createBrowserClient(PUBLIC_SUPABASE_URL, PUBLIC_SUPABASE_KEY, {
 				global: {
 					fetch
+				},
+				auth: {
+					flowType: 'pkce',
+					detectSessionInUrl: true,
+					autoRefreshToken: true
 				}
 			})
 		: createServerClient(PUBLIC_SUPABASE_URL, PUBLIC_SUPABASE_KEY, {
 				global: {
 					fetch
+				},
+				auth: {
+					flowType: 'pkce',
+					detectSessionInUrl: true,
+					autoRefreshToken: true
 				},
 				cookies: {
 					getAll() {

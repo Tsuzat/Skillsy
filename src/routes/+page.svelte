@@ -213,7 +213,7 @@
 		<div
 			class="group z-10 mx-auto flex w-fit items-center gap-4 rounded-full border bg-muted p-1 pl-4 shadow-md shadow-zinc-950/5 transition-colors duration-300 hover:bg-background dark:border-t-white/5 dark:shadow-zinc-950 dark:hover:border-t-border"
 		>
-			<span class="text-sm text-foreground">✨ Fine tuned AI models with top resume templates</span>
+			<span class="text-sm text-foreground">✨ Fine tuned AI models with top resume</span>
 			<span class="block h-4 w-0.5 border-l bg-muted-foreground dark:border-background"></span>
 
 			<div

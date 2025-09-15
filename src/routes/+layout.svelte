@@ -30,6 +30,6 @@
 <Toaster richColors closeButton />
 
 <main class="mx-auto max-w-4xl px-2 sm:px-0">
-	<Header />
+	<Header {session} {supabase} />
 	{@render children?.()}
 </main>
