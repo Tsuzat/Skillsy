@@ -4,6 +4,9 @@
 
 	import { invalidate } from '$app/navigation';
 	import { onMount } from 'svelte';
+	import { ModeWatcher } from 'mode-watcher';
+	import { Toaster } from '$lib/components/ui/sonner';
+	import Header from '$lib/components/custom/Header.svelte';
 
 	let { data, children } = $props();
 	let { supabase, session } = $derived(data);
@@ -23,4 +26,10 @@
 	<link rel="icon" href={favicon} />
 </svelte:head>
 
-{@render children?.()}
+<ModeWatcher />
+<Toaster richColors closeButton />
+
+<main class="mx-auto max-w-4xl px-2 sm:px-0">
+	<Header />
+	{@render children?.()}
+</main>
